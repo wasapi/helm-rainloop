@@ -12,10 +12,11 @@ spec:
   # Required to prevent escalations to root.
   allowPrivilegeEscalation: true
   # This is redundant with non-root + disallow privilege escalation,
-  # but we can provide it for defense in depth.                           
+  # but we can provide it for defense in depth.       
+  allowedCapabilities:
+    - CHOWN                 # Make arbitrary changes to file UIDs and GIDs                       
   requiredDropCapabilities:
     - AUDIT_WRITE           # Write records to kernel auditing log
-    - CHOWN                 # Make arbitrary changes to file UIDs and GIDs 
     - NET_BIND_SERVICE      # Bind a socket to Internet domain privileged ports (port numbers less than 1024).  
     - DAC_OVERRIDE          # Bypass file read, write, and execute permission checks.  (DAC is an abbreviation of "discretionary access control".)
     - FOWNER                # * Bypass permission checks on operations that normally require
