@@ -74,3 +74,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+psp:
+  # Set this to true to create PSPs
+  create: "false"
+
+serviceAccount:
+  create: true
+  name: rainloop  
