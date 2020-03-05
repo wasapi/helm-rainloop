@@ -8,7 +8,6 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  serviceAccountName: {{ template "rainloop.serviceAccountName" . }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -20,6 +19,7 @@ spec:
         app: {{ template "rainloop.name" . }}
         release: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ template "rainloop.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
