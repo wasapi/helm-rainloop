@@ -1,5 +1,5 @@
 [cookbookurl]: https://geek-cookbook.funkypenguin.co.nz
-[kitchenurl]: https://discourse.kitchen.funkypenguin.co.nz
+[kitchenurl]: https://discourse.geek-kitchen.funkypenguin.co.nz
 [discordurl]: http://chat.funkypenguin.co.nz
 [patreonurl]: https://patreon.com/funkypenguin
 [blogurl]: https://www.funkypenguin.co.nz

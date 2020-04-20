@@ -75,6 +75,8 @@ tolerations: []
 
 affinity: {}
 
+securityContext: {}
+
 psp:
   # Set this to true to create PSPs
   create: "false"

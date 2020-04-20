@@ -47,6 +47,8 @@ spec:
             mountPath: {{ .Values.container.volumes.data.path }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+          securityContext:
+{{ toYaml .Values.securityContext | indent 12 }}   
       volumes:
       - name: data
       {{- if .Values.persistence.enabled }}
