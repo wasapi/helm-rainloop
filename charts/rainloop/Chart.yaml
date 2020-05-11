@@ -3,3 +3,13 @@ appVersion: "1.14.0"
 description: A beautiful and modern webmail interface (https://www.rainloop.net)
 name: rainloop
 version: 1.0.1
+sources:
+- https://github.com/geek-cookbook/helm-rainloop
+maintainers:
+- name: funkypenguin
+  email: davidy@funkypenguin.co.nz
+keywords:
+- mailserver
+- rainloop
+- webmail
+home: https://github.com/geek-cookbook/helm-rainloop

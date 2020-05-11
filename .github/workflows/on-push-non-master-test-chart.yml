@@ -1,13 +1,15 @@
-name: Testing
+name: Test Osterone
 
 on: 
-  pull_request:
+  push:
     paths:
       - 'charts/**'   
       - '.github/**'            
+    ignore_branches:
+      - 'master'
 
 jobs:
-  ct-test:
+  ct-lint-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,8 +19,10 @@ jobs:
         id: lint
         uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
-          config: .ci/ct-config.yaml
+          config: .ci/ct-no-version-config.yaml
           command: lint
+        env:
+          CT_CHECK_VERSION_INCREMENT: false
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-rc.1
