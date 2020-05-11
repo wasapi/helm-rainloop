@@ -1,10 +1,12 @@
 name: Testing
 
 on: 
-  pull_request:
+  push:
     paths:
       - 'charts/**'   
       - '.github/**'            
+    ignore_branches:
+      - 'master'
 
 jobs:
   ct-test:
@@ -17,7 +19,7 @@ jobs:
         id: lint
         uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
-          config: .ci/ct-config.yaml
+          config: .ci/ct-no-version-config.yaml
           command: lint
 
       - name: Create kind cluster
@@ -31,4 +33,4 @@ jobs:
         uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
           command: install
-          config: .ci/ct-config.yaml
+          config: .ci/ct-no-version-config.yaml
