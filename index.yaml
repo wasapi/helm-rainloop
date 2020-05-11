@@ -3,6 +3,25 @@ entries:
   rainloop:
   - apiVersion: v1
     appVersion: 1.14.0
+    created: "2020-05-11T10:00:30.964842643Z"
+    description: A beautiful and modern webmail interface (https://www.rainloop.net)
+    digest: 0ce5527ec1e98c993d1e7bc8a4652a75296cd4461f698a58d905f6cc8ab23a1d
+    home: https://github.com/geek-cookbook/helm-rainloop
+    keywords:
+    - mailserver
+    - rainloop
+    - webmail
+    maintainers:
+    - email: davidy@funkypenguin.co.nz
+      name: funkypenguin
+    name: rainloop
+    sources:
+    - https://github.com/geek-cookbook/helm-rainloop
+    urls:
+    - https://github.com/geek-cookbook/helm-rainloop/releases/download/rainloop-1.0.2/rainloop-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    appVersion: 1.14.0
     created: "2020-05-11T02:54:29.529307857Z"
     description: A beautiful and modern webmail interface (https://www.rainloop.net)
     digest: f5b3ef562305eb8ff2ddd6ee3765b98cbad64c9afec67044b11ce5cc0c75a2a0
