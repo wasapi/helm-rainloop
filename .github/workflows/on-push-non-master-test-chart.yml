@@ -19,8 +19,10 @@ jobs:
         id: lint
         uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
-          config: .ci/ct-no-version-config.yaml
+          config: .ci/ct-config.yaml
           command: lint
+        env:
+          CT_CHECK_VERSION_INCREMENT: false
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-rc.1
@@ -33,4 +35,4 @@ jobs:
         uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
           command: install
-          config: .ci/ct-no-version-config.yaml
+          config: .ci/ct-config.yaml
