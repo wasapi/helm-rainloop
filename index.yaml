@@ -3,6 +3,15 @@ entries:
   rainloop:
   - apiVersion: v1
     appVersion: 1.14.0
+    created: "2020-05-11T02:54:29.529307857Z"
+    description: A beautiful and modern webmail interface (https://www.rainloop.net)
+    digest: f5b3ef562305eb8ff2ddd6ee3765b98cbad64c9afec67044b11ce5cc0c75a2a0
+    name: rainloop
+    urls:
+    - https://github.com/geek-cookbook/helm-rainloop/releases/download/rainloop-1.0.1/rainloop-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: 1.14.0
     created: "2020-04-20T02:40:14.757122875Z"
     description: A beautiful and modern webmail interface (https://www.rainloop.net)
     digest: 2d8d6e387f7011db64e3cbf8b826c67128de645f9b9568cd64f90af62188d5d7
