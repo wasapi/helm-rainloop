@@ -1,4 +1,8 @@
 # This file defines the config for "ct" (chart tester) used by the helm linting GitHub workflow
 
 lint-conf: .ci/lint-config.yaml
-check-version: false
+
+# Don't bother checking version changes on a non-master push, it's likely that multiple lints
+# of the same version will be required, and requiring a new version for each just encourages
+# the needless bumping of versions
+check-version-increment: false
