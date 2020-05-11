@@ -20,7 +20,7 @@ jobs:
         uses: helm/chart-testing-action@v1.0.0-rc.2
         with:
           config: .ci/ct-config.yaml
-          command: lint
+          command: lint --check-version-increment false
         env:
           CT_CHECK_VERSION_INCREMENT: false
 
