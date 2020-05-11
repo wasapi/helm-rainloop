@@ -47,3 +47,4 @@ helm repo add funkypenguin https://funkypenguin.github.io/helm-charts
 helm repo update
 helm install --name rainloop rainloop
 ```
+
