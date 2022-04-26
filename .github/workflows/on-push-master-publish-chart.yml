@@ -21,20 +21,20 @@ jobs:
 
     - name: Run chart-testing (lint), ensuring a version bump
       id: lint
-      uses: helm/chart-testing-action@v1.0.0-rc.2
+      uses: helm/chart-testing-action@v2.2.1
       with:
         config: .ci/ct-config.yaml
         command: lint
 
     - name: Create kind cluster
-      uses: helm/kind-action@v1.0.0-rc.1
+      uses: helm/kind-action@v1.2.0
       with:
         install_local_path_provisioner: true
       # Only build a kind cluster if there are chart changes to test.
       if: steps.lint.outputs.changed == 'true'
 
     - name: Run chart-testing (install)
-      uses: helm/chart-testing-action@v1.0.0-rc.2
+      uses: helm/chart-testing-action@v2.2.1
       with:
         command: install
         config: .ci/ct-config.yaml
@@ -52,14 +52,14 @@ jobs:
     #    ./get_helm.sh
 
     - name: Run chart-releaser
-      uses: helm/chart-releaser-action@v1.0.0-rc.2
-      env:
-        CR_TOKEN: "${{ secrets.CR_TOKEN }}"
+      uses: helm/chart-releaser-action@v1.4.0
+      # env:
+      #   CR_TOKEN: "${{ secrets.CR_TOKEN }}"
 
     - name: Update chart repo
       uses: mvasigh/dispatch-action@master
       with:
-        token: ${{ secrets.CR_TOKEN }}
+        # token: ${{ secrets.CR_TOKEN }}
         repo: charts
         owner: geek-cookbook
         event_type: chart_update
