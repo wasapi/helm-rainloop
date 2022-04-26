@@ -16,6 +16,8 @@ service:
   port: 80
   targetPort: 8888
 
+runtimeClassName:
+
 ingress:
   enabled: false
   annotations: {}

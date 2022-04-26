@@ -25,6 +25,7 @@ spec:
         app: {{ template "rainloop.name" . }}
         release: {{ .Release.Name }}
     spec:
+      runtimeClassName: {{ .Values.runtimeClassName }}
       serviceAccountName: {{ template "rainloop.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
