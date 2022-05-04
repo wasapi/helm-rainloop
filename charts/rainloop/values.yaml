@@ -18,6 +18,8 @@ service:
 
 runtimeClassName:
 
+priorityClassName:
+
 ingress:
   enabled: false
   annotations: {}
@@ -78,6 +80,8 @@ tolerations: []
 affinity: {}
 
 securityContext: {}
+
+posecurityContext: {}
 
 deployment:
   ## Add annotations to the deployment
