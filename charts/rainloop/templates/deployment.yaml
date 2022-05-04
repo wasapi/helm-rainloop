@@ -30,7 +30,6 @@ spec:
       serviceAccountName: {{ template "rainloop.serviceAccountName" . }}
       securityContext:
 {{ toYaml .Values.podsecurityContext | indent 8 }}   
-      volumes:      
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
