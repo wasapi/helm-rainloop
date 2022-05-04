@@ -59,7 +59,7 @@ jobs:
     - name: Update chart repo
       uses: mvasigh/dispatch-action@master
       with:
-        # token: ${{ secrets.CR_TOKEN }}
+        token: "${{ secrets.GITHUB_TOKEN }}" 
         repo: charts
         owner: geek-cookbook
         event_type: chart_update
