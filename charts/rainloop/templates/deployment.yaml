@@ -24,6 +24,10 @@ spec:
       labels:
         app.kubernetes.io/name: {{ template "rainloop.name" . }}
         release: {{ .Release.Name }}
+    {{- if .Values.deployment.annotations }}
+      annotations:
+    {{ toYaml .Values.deployment.annotations | indent 4 }}  
+    {{ end }}   
     spec:
       priorityClassName: {{ .Values.priorityClassName }}
       runtimeClassName: {{ .Values.runtimeClassName }}
