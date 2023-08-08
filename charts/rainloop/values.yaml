@@ -88,10 +88,6 @@ deployment:
   ## Useful for using something like stash to backup data (https://stash.run/docs/v0.9.0-rc.0/guides/latest/auto-backup/workload/)
   annotations: {}  
 
-psp:
-  # Set this to true to create PSPs
-  create: "false"
-
 serviceAccount:
   create: true
   name: rainloop  
